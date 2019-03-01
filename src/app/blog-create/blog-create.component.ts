@@ -2,7 +2,7 @@ import { Component, OnInit ,ViewContainerRef} from '@angular/core';
 import { BlogHttpService } from "../blog-http.service";
 import { BlogserviceService } from "../blogservice.service";
 import {ActivatedRoute,Router} from '@angular/router';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-blog-create',
@@ -11,7 +11,7 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 })
 export class BlogCreateComponent implements OnInit {
 
-  constructor(private blogHttpService:BlogHttpService,private blogservice:BlogserviceService,private _route:ActivatedRoute,private router:Router,private toastr: ToastsManager, vcr: ViewContainerRef) { 
+  constructor(private blogHttpService:BlogHttpService,private blogservice:BlogserviceService,private _route:ActivatedRoute,private router:Router,private toastr:ToastrService, vcr: ViewContainerRef) { 
     this.toastr.setRootViewContainerRef(vcr);
   }
   public blogTitle: string;
