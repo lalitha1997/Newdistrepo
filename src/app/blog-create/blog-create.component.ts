@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class BlogCreateComponent implements OnInit {
 
   constructor(private blogHttpService:BlogHttpService,private blogservice:BlogserviceService,private _route:ActivatedRoute,private router:Router,private toastr:ToastrService, vcr: ViewContainerRef) { 
-    this.toastr.setRootViewContainerRef(vcr);
+    //this.toastr.setRootViewContainerRef(vcr);
   }
   public blogTitle: string;
   public blogBodyHtml: string;
