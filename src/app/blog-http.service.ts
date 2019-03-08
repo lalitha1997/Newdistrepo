@@ -38,7 +38,7 @@ export class BlogHttpService {
 
   }
 
-  editBlog(blogId,blogData): any {
+  editBlog(blogId: string,blogData: any): any {
 
     
     let myResponse = this._http.put(this.baseUrl + '/' + blogId + '/edit' + '?authToken=' + this.authToken, blogData)

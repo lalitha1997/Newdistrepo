@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { BlogserviceService } from "../blogservice.service";
 import { BlogHttpService } from "../blog-http.service";
 import { Location } from '@angular/common';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-blog-edit',
@@ -16,9 +16,9 @@ export class BlogEditComponent implements OnInit {
   public currentBlog;
   public possibleCategories = ["Comedy", "Drama", "Action", "Technology"];
   
-  constructor(private _route: ActivatedRoute, private router: Router, private blogservice: BlogserviceService, private blogHttpService: BlogHttpService, private location: Location, private toastr: ToastsManager, vcr: ViewContainerRef) {
+  constructor(private _route: ActivatedRoute, private router: Router, private blogservice: BlogserviceService, private blogHttpService: BlogHttpService, private location: Location, private toastr: ToastrService, vcr: ViewContainerRef) {
 
-    this.toastr.setRootViewContainerRef(vcr);
+   // this.toastr.setRootViewContainerRef(vcr);
   }
   ngOnInit() {
     let myBlogId = this._route.snapshot.paramMap.get('blogId');
