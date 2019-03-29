@@ -3,7 +3,7 @@
       <div class="col-md-12">
         <h2>{{currentBlog.title}}</h2>
               <p>posted by {{currentBlog.author}} on {{currentBlog.created | date}}</p>
-        
+      
         <hr>
         <div [innerHtml]="currentBlog.bodyHtml"></div>
         <hr>
